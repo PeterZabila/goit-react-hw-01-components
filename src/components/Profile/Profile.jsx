@@ -1,18 +1,18 @@
 import Stats from './Stats/Stats';
+import { Description, Avatar } from './Profile.styled';
 
-export default function ({ username, tag, location, avatar, stats}) {
+export default function Profile ({ username, tag, location, avatar, stats}) {
     return (
-        <div className="profile">
-            <div className="description">
-                <img
+        <div className="container">
+            <Description>
+                <Avatar
                 src={avatar}
                 alt="User avatar"
-                className="avatar"
                 />
-                <p className="name">{username}</p>
+                <h3 className="name">{username}</h3>
                 <p className="tag">{tag}</p>
                 <p className="location">{location}</p>
-            </div>
+            </Description>
 
              <Stats stats={stats}/>
         </div>

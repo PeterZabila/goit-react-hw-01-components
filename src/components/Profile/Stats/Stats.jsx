@@ -1,9 +1,10 @@
+import { ProfileStats } from "./Stats.styled";
 
 
-export default function ({stats}) {
+export default function Stats ({stats}) {
   const { followers, views, likes } = stats;
     return (
-        <ul className="stats">
+        <ProfileStats>
             <li>
               <span className="label">Followers</span>
               <span className="quantity">{followers}</span>
@@ -16,6 +17,6 @@ export default function ({stats}) {
               <span className="label">Likes</span>
               <span className="quantity">{likes}</span>
             </li>
-        </ul>
+        </ProfileStats>
     )
 }

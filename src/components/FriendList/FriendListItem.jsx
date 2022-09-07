@@ -1,11 +1,12 @@
-import { Chip } from './FriendListItem.styled'
+import { Chip, Friend } from './FriendListItem.styled'
 
 export default function FriendListItem ({avatar, name, isOnline }) {
     return (
-        <li className="item">
+        
+        <Friend>
            <Chip isOnline={isOnline} />
             <img className="avatar" src={avatar} alt="User avatar" width="48" />
-            <p className={name}></p>
-        </li>
+            <p>{name}</p>
+        </Friend>
     )
 }
